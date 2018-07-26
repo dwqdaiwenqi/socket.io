@@ -171,7 +171,10 @@ $(function() {
 
   // Gets the 'X is typing' messages of a user
   const getTypingMessages = (data) => {
-    return $('.typing.message').filter(i => {
+//     return $('.typing.message').filter(i => {
+//       return $(this).data('username') === data.username;
+//     });
+    return $('.typing.message').filter(function(i){
       return $(this).data('username') === data.username;
     });
   }
